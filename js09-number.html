@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function numberObj(){
+            //literal : 값
+            var num01 = 3
+            // alert(num01 + ":" + typeof(num01))
+
+            //object : 객체 - new 로 새로 만든 객체이다.
+            var num02 = new Number(3)
+            // alert(num02 + ":" + typeof(num02))
+
+            // 문자열 1을 숫자로 바꿔줌
+            // alert(parseInt("1") + 1)
+            
+
+            // NaN : Not a Number(type) Null과 비슷
+            // alert(parseInt("a") + 1)
+
+            var prop = prompt("숫자만 입력해 주세요")
+            if (isNaN(prop)){
+                alert("숫자가 아닙니다.")
+            } else {
+                alert("숫자가 맞습니다.")
+            }
+        }
+
+        function randomNum(){
+            // Math.random() : 0 <= x < 1
+            // math.floor() : 내림
+            // math.round() : 반올림
+            // math.ceil() : 올림
+
+            // 0 ~ 100
+            // Math.random()에 100을 곱하면 0 <= x < 100
+            // Math.random()에 99를 곱하고 1을 더함 1 <= x < 100
+            var hundred = Math.floor(Math.random() + 101)
+
+            // 10 ~ 100
+            var min = 10
+            var max = 100
+            var ran = Math.floor(Math.random() * (max - min) + min)
+            alert(ran)
+        }
+
+    </script>
+</head>
+<body>
+
+    <h1>숫자</h1>
+
+    <button onclick="numberObj()">숫자</button>
+    <br>
+    <button onclick="randomNum()">난수</button>
+    <br>
+    <!-- <button onclick="()">숫자</button>
+    <br>
+    <button onclick="()">숫자</button> -->
+    <!-- <br> -->
+    
+</body>
+</html>
